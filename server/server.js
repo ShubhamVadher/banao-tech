@@ -14,10 +14,9 @@ app.use(express.urlencoded({extended:true}))
 app.use(cooki_parser());
 app.use(express.json())
 app.use(cors({
-    origin: "http://localhost:5173",
-    credentials: true
+  origin: "https://banao-mern-sq4t.onrender.com/",
+  credentials: true
 }));
-
 app.post('/signin',async(req,res)=>{
     const {email,password}=req.body;
     const user=await User.findOne({email});
