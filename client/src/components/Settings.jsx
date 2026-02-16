@@ -16,7 +16,7 @@ const Settings = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/me", {
+      const res = await axios.get("https://banao-tech-tplv.onrender.com/me", {
         withCredentials: true,
       });
       setUser(res.data);
@@ -40,7 +40,7 @@ const Settings = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/change-password",
+        "https://banao-tech-tplv.onrender.com/change-password",
         {
           currentPassword: form.currentPassword,
           newPassword: form.newPassword,
