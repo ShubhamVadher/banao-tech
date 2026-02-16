@@ -23,7 +23,7 @@ const Navbar = () => {
   const checkAuth = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/isloggedin",
+        "https://banao-tech-tplv.onrender.com/isloggedin",
         { withCredentials: true }
       );
       if (res.status === 200) setIsLoggedIn(true);
@@ -56,7 +56,7 @@ const Navbar = () => {
         }
 
         await axios.post(
-          "http://localhost:5000/signup",
+          "https://banao-tech-tplv.onrender.com/signup",
           {
             username: form.username,
             email: form.email,
@@ -66,7 +66,7 @@ const Navbar = () => {
         );
       } else {
         await axios.post(
-          "http://localhost:5000/signin",
+          "https://banao-tech-tplv.onrender.com/signin",
           {
             email: form.email,
             password: form.password,
@@ -91,7 +91,7 @@ const Navbar = () => {
   const logout = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/logout",
+        "https://banao-tech-tplv.onrender.com/logout",
         { withCredentials: true }
       );
 
